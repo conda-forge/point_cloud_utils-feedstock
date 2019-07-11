@@ -1,5 +1,5 @@
 {% set name = "point_cloud_utils" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/fwilliams/point-cloud-utils/archive/{{ version }}.tar.gz
-  sha256: e4412741a180139b32408819c029ca526a7b1eaf6d3a9e99ddb07de90c237eda
+  sha256: 9adcce58c7f7a18a17bd5b02f7cfaa09da89647b724ea86829143eea9aedfda2
 
 build:
   number: 0

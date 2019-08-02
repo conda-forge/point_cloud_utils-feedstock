@@ -11,8 +11,8 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv --clean"
-  skip: true  # [win and vc<14]
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  skip: true  # [win and vc<15]
   
 requirements:
   build:

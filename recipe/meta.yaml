@@ -1,5 +1,5 @@
 {% set name = "point_cloud_utils" %}
-{% set version = "0.7.5" %}
+{% set version = "0.7.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://github.com/fwilliams/point-cloud-utils/archive/{{ version }}.tar.gz
-  sha256: 52dec5b4842a8396496e05deff7e2413a948e23411378ed7c340ce6d340b86d2
+  sha256: 5642ea181808eb60c1b89a2ea8f5aefde04cf56f6ce8011ae2a5f99fee25c611
 
 build:
   number: 0
   script:
-    - "{{ PYTHON }} -m pip install . --no-deps -vv"
+    - "{{ PYTHON }} -m pip install . --no-deps -vv --install-option='--exclude-arch'" 
   skip: true  # [win and vc<14]
-  
+    
 requirements:
   build:
     - {{ compiler('cxx') }}

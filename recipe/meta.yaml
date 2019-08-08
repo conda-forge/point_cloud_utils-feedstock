@@ -12,7 +12,7 @@ source:
 build:
   number: 0
   script:
-    - "{{ PYTHON }} -m pip install . --no-deps -vv --install-option='--exclude-arch'" 
+    - "{{ PYTHON }} -m pip install . --no-deps -vv --install-option=\"--exclude-arch\"" 
   skip: true  # [win and vc<14]
     
 requirements:

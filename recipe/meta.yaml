@@ -36,7 +36,11 @@ requirements:
 test:
   imports:
     - point_cloud_utils
-
+  source_files:
+    - tests/test_examples.py
+  commands:
+    - python tests/test_examples.py
+    
 about:
   home: http://github.com/fwilliams/point-cloud-utils
   license: GPL-2.0

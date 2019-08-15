@@ -1,5 +1,5 @@
 {% set name = "point_cloud_utils" %}
-{% set version = "0.8.3" %}
+{% set version = "0.8.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/fwilliams/point-cloud-utils/archive/{{ version }}.tar.gz
-  sha256: cdbb77ce7659eb2a5542c6dc4368708ee8b8201a32bfa6c08650365f75c653d9
+  sha256: c58e82ae74ded9949ef746f3209972cd10001344c82cf1a8320bd64dd4cdb883
 
 build:
   number: 0
@@ -38,7 +38,7 @@ test:
     - point_cloud_utils
   source_files:
     - tests/test_examples.py
-    - data/cube_twist.ply
+    - data/cube_twist.obj
   commands:
     - python tests/test_examples.py
     

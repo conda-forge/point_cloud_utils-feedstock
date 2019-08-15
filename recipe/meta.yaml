@@ -38,6 +38,7 @@ test:
     - point_cloud_utils
   source_files:
     - tests/test_examples.py
+    - data/cube_twist.ply
   commands:
     - python tests/test_examples.py
     

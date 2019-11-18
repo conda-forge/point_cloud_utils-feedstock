@@ -10,7 +10,7 @@ source:
   sha256: 1aa2680b99e1aa72a03f2a8b1528e828dcf2e0079b953cad02391866a0dbb93e
 
 build:
-  number: 0
+  number: 1
   script:
     - set "CMAKE_GENERATOR=NMake Makefiles"  # [win]
     - "{{ PYTHON }} -m pip install . --no-deps -vv --install-option=\"--exclude-arch\"" 

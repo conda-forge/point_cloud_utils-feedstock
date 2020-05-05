@@ -1,5 +1,5 @@
 {% set name = "point_cloud_utils" %}
-{% set version = "0.13.0" %}
+{% set version = "0.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/fwilliams/point-cloud-utils/archive/{{ version }}.tar.gz
-  sha256: 28e7a37cf51d2973ab99ace90732b2f5b1c9bb91668ab4fcb3405a427de59bc9
+  sha256: 709a28d527f6d8394b8205d058dc44e82f0262b33a6d42100cb53c9f07f31811
 
 build:
   number: 2
@@ -21,6 +21,7 @@ requirements:
     - {{ compiler('cxx') }}
     - git
     - cmake
+    - openmp
   host:
     - python
     - pip
@@ -32,6 +33,7 @@ requirements:
     - python
     - {{ pin_compatible('numpy') }}
     - scipy
+    - openmp
 
 test:
   imports:

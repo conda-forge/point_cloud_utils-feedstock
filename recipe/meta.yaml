@@ -41,6 +41,7 @@ test:
   source_files:
     - tests/test_examples.py
     - data/cube_twist.obj
+    - data/duplicated_pcloud.ply
   commands:
     - python tests/test_examples.py
     

@@ -1,21 +1,21 @@
 {% set name = "point_cloud_utils" %}
-{% set version = "0.19.0" %}
+{% set version = "0.21.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/fwilliams/point-cloud-utils/archive/{{ version }}.tar.gz
-  sha256: b241c9609d5c08ae3887fbf5d3a2525182beb85d3452ec09952f681e27d94b21
+  url: https://github.com/fwilliams/point-cloud-utils/archive/v{{ version }}.tar.gz
+  sha256: 79d4327707b61e050a0b7e8409ab3a1d83fc9e8f06d7cf3613042eeb2c945962
 
 build:
-  number: 1
+  number: 0
   script:
     - set "CMAKE_GENERATOR=NMake Makefiles"  # [win]
-    - "{{ PYTHON }} -m pip install . --no-deps -vv --install-option=\"--exclude-arch\"" 
+    - {{ PYTHON }} -m pip install . --no-deps -vv --install-option="--exclude-arch"
   skip: true  # [win and vc<14]
-    
+
 requirements:
   build:
     - {{ compiler('cxx') }}
@@ -28,7 +28,7 @@ requirements:
     - setuptools
     - numpy
     - scipy
-    
+
   run:
     - python
     - {{ pin_compatible('numpy') }}
@@ -44,13 +44,13 @@ test:
     - data/duplicated_pcloud.ply
   commands:
     - python tests/test_examples.py
-    
+
 about:
   home: http://github.com/fwilliams/point-cloud-utils
   license: GPL-2.0
   license_family: GPL
   license_file: LICENSE
-  summary: 'A Python library for common tasks on 3D point clouds'
+  summary: A Python library for common tasks on 3D point clouds
 
 
 extra:
